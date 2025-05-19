@@ -5,6 +5,9 @@ const connectDB = require('./db'); // if you created it, otherwise remove
 const authRoutes = require('./routes/auth');
 
 const app = express();
+const timetableRoutes = require('./routes/timetable');
+app.use('/api/timetable', timetableRoutes);
+
 app.use(cors());
 app.use(express.json());
 
