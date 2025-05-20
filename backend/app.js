@@ -6,13 +6,13 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 const timetableRoutes = require('./routes/timetable');
-app.use('/api/timetable', timetableRoutes);
+const notificationRoutes = require('./routes/notifications');
 
+app.use('/api/notifications', notificationRoutes);
+app.use('/api/timetable', timetableRoutes);
 app.use(cors());
 app.use(express.json());
-
 app.use('/api/auth', authRoutes);
-
 app.get('/', (req, res) => res.send('API running ✅'));
 
 const PORT = process.env.PORT || 5000;

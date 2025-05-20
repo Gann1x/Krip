@@ -12,7 +12,7 @@ const Login = () => {
     setMsg('Logging in...');
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/login', {
+      const res = await fetch('/api/auth/login', {   // 👈 Updated line
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -62,4 +62,3 @@ const Login = () => {
 };
 
 export default Login;
-

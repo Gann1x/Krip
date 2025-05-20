@@ -30,14 +30,6 @@ const DashboardView = ({ user, unread, onLogout }) => {
 
       <main className="dashboard-content">
         <h2>Welcome to your dashboard</h2>
-        <div className="card-grid">
-          {Array.from({ length: 12 }, (_, i) => (
-            <div className="dashboard-card" key={i}>
-              <h4>Card {i + 1}</h4>
-              <p>This is content inside the card.</p>
-            </div>
-          ))}
-        </div>
       </main>
     </div>
   );
